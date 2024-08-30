@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <DUT Name="Motor" Id="{87693b07-7166-4976-aabd-277de60e6952}">
+    <Declaration><![CDATA[TYPE Motor :
+STRUCT	
+	name: STRING;
+	motorId: INT;
+	isAxisSelected: BOOL;
+	
+	encoder: REAL;
+	status: AxisStatus;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

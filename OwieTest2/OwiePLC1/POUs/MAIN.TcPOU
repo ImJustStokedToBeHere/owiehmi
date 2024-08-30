@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+  <POU Name="MAIN" Id="{d8b28e72-1144-429e-a297-29a2c3b328e4}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	selectedIndex: INT := 0;
+	px: MotorProxy;
+	motors: ARRAY[0..3] OF Motor;
+	
+	
+	aComboboxEntries : ARRAY [0..5] OF ST_ComboboxEntry;
+
+	
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+	aComboboxEntries[0].id:=0;
+	aComboboxEntries[0].text:="Motor One";
+	aComboboxEntries[0].value:=0;
+	
+	
+	
+
+
+
+
+
+
+//	GVL.motors[0].name := "One";
+	motors[0].motorId := 1;
+	motors[0].isAxisSelected := 1;
+	motors[0].encoder := 0.012;
+	motors[0].status := AxisStatus.Ready;
+	
+	//GVL.motors[1].name := "Two";
+	motors[1].motorId := 2;
+	motors[1].isAxisSelected := 1;
+	motors[1].encoder := 0.012;
+	motors[1].status := AxisStatus.Ready;
+	
+	//GVL.motors[2].name := "Three";
+	motors[2].motorId := 3;
+	motors[2].isAxisSelected := 1;
+	motors[2].encoder := 0.012;
+	motors[2].status := AxisStatus.Ready;
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="52" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="73" Count="3" />
+      <LineId Id="72" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="41" Count="1" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="43" Count="2" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="49" Count="1" />
+      <LineId Id="47" Count="0" />
+      <LineId Id="10" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
